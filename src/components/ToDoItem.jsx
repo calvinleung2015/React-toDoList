@@ -1,5 +1,7 @@
+//import react component
 import React from "react";
 
+//props: passing information to a component. 
 function toDoItem(props) {
 
   return (

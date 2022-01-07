@@ -6,15 +6,17 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [items, setItems] = useState([]);
 
+  //get "inputText" value every single time from event and then set to "setInputText"
   function handleChange(event) {
     setInputText(event.target.value);
   }
 
+  
   function addItem(event){
-    setItems( (prevItems) => {
+    setItems( (prevItems) => { // prevItems contains previus appended elements in an array[]
       return [...prevItems, inputText];
     });
-    setInputText("");
+    setInputText(""); // reset inputText
   }
 
   function deleteItem(id){
@@ -50,3 +52,9 @@ function App() {
 }
 
 export default App;
+
+
+//The curly braces are a special syntax to let the JSX parser know that it needs to interpret the contents in between them as JavaScript instead of a string.
+
+//The React useState Hook allows us to track state in a function component.
+
